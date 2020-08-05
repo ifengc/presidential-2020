@@ -11,4 +11,15 @@
 3. ```
    python addr2latlng.py [the_address_file]
    ```
-   遇到錯誤會retry 3次，最後會產生 `[the_address_file]_latlng.csv` 的檔案
+   遇到錯誤會retry 3次，最後會產生 `[the_address_file]\_latlng.csv` 的檔案
+
+
+## 經緯度疊農委會疑似工廠地圖
+### Usage
+
+1. 將 geojson_mapping.py 裡的 GEOJSON_FILE(農委會的geojson檔), INPUT_ADDR_LATLNG(地址轉換經緯度的輸出檔案), OUTPUT_FILE(結果輸出檔名) 變數換成要處理的檔案名稱
+
+2. ``` 
+   python geojson_mapping.py
+   ```
+   結果只會留下有疊到的點，格式為原本的輸出加上一欄對應到的農委會地圖裡的id
